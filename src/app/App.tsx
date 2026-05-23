@@ -38,6 +38,8 @@ const START_DATE = new Date('2026-05-18');
 const TARGET_DEADLINE = new Date('2026-09-01T00:00:00');
 
 const INPUT_TASKS = [
+  "! 1. Vocabulary , ",
+  "! 2. Thinking in English ",
   "📘 1. Murphy Grammar: Yangi qoidani o'rganish va matn bazasida hayotiy gap tuzish",
   "⚡ 2. DEEP READING (20 daqiqa): Transkript 1-yarmini o'qish, struktura tahlili",
   "🔍 3. Pattern Isolation: Matndan yoqqan nutqiy tayyor qoliplarni ajratib olish",
@@ -47,12 +49,14 @@ const INPUT_TASKS = [
 ];
 
 const OUTPUT_TASKS = [
-  "🔄 1. Murphy Review: O'rganilgan yangi elementlarni ko'zdan kechirish",
-  "💥 2. READING COMPLETION: Qolgan 2-yarmini o'qish va yangi patternlarni yig'ish",
-  "🎧 3. Dictation (2-yarmi): Qolgan qismni eshitib yozishni yakunlash",
-  "🚀 4. Full Shadowing: Butun matnni audio bilan to'xtamay qaytarish",
-  "🔥 5. pyramid SPEAKING ATTACK: Olingan barcha qiyin iboralarni nutqqa majburlab tiqish",
-  "✍️ 6. Academic Writing: Mavzu yuzasidan 1 ta mukammal akademik abzas yozish"
+  "! 1. Vocabulary , ",
+  "! 2. Thinking in English ",
+  "🔄 3. Murphy Review: O'rganilgan yangi elementlarni ko'zdan kechirish",
+  "💥 4. READING COMPLETION: Qolgan 2-yarmini o'qish va yangi patternlarni yig'ish",
+  "🎧 5. Dictation (2-yarmi): Qolgan qismni eshitib yozishni yakunlash",
+  "🚀 6. Full Shadowing: Butun matnni audio bilan to'xtamay qaytarish",
+  "🔥 7. pyramid SPEAKING ATTACK: Olingan barcha qiyin iboralarni nutqqa majburlab tiqish",
+  "✍️ 8. Academic Writing: Mavzu yuzasidan 1 ta mukammal akademik abzas yozish"
 ];
 
 export default function App() {
@@ -370,8 +374,8 @@ export default function App() {
                   key={w}
                   onClick={() => setActiveWeek(w)}
                   className={`px-4 py-2 rounded-lg text-xs font-bold whitespace-nowrap transition-all ${w === activeWeek
-                      ? 'bg-[#2563eb] text-white border-[#2563eb] shadow-lg scale-105'
-                      : 'bg-[#1e293b] text-[#94a3b8] border-[#334155] hover:bg-[#334155]'
+                    ? 'bg-[#2563eb] text-white border-[#2563eb] shadow-lg scale-105'
+                    : 'bg-[#1e293b] text-[#94a3b8] border-[#334155] hover:bg-[#334155]'
                     } border`}
                 >
                   {w}-W
@@ -411,10 +415,10 @@ export default function App() {
                           [{dateStr}] {day.id}
                         </span>
                         <span className={`text-[9px] md:text-xs px-2 py-0.5 rounded font-bold ${day.type === 'input'
-                            ? 'bg-[rgba(37,99,235,0.2)] text-[#60a5fa] border border-[rgba(37,99,235,0.4)]'
-                            : day.type === 'output'
-                              ? 'bg-[rgba(168,85,247,0.2)] text-[#c084fc] border border-[rgba(168,85,247,0.4)]'
-                              : 'bg-[#334155] text-[#cbd5e1]'
+                          ? 'bg-[rgba(37,99,235,0.2)] text-[#60a5fa] border border-[rgba(37,99,235,0.4)]'
+                          : day.type === 'output'
+                            ? 'bg-[rgba(168,85,247,0.2)] text-[#c084fc] border border-[rgba(168,85,247,0.4)]'
+                            : 'bg-[#334155] text-[#cbd5e1]'
                           }`}>
                           {day.type.toUpperCase()}
                         </span>
@@ -430,8 +434,8 @@ export default function App() {
                             <div className="w-24 h-2 bg-[#1e293b] rounded-full overflow-hidden">
                               <div
                                 className={`h-full transition-all duration-500 ${progressPercent === 100
-                                    ? 'bg-gradient-to-r from-[#10b981] to-[#059669]'
-                                    : 'bg-gradient-to-r from-[#2563eb] to-[#a855f7]'
+                                  ? 'bg-gradient-to-r from-[#10b981] to-[#059669]'
+                                  : 'bg-gradient-to-r from-[#2563eb] to-[#a855f7]'
                                   }`}
                                 style={{ width: `${progressPercent}%` }}
                               />
@@ -602,8 +606,8 @@ export default function App() {
                   key={tab.id}
                   onClick={() => setCurrentReportTab(tab.id)}
                   className={`flex-1 py-2.5 px-2 rounded-lg text-xs font-bold transition-all ${currentReportTab === tab.id
-                      ? 'bg-[#1e293b] text-[#38bdf8] shadow-lg'
-                      : 'text-[#94a3b8] hover:text-white'
+                    ? 'bg-[#1e293b] text-[#38bdf8] shadow-lg'
+                    : 'text-[#94a3b8] hover:text-white'
                     }`}
                 >
                   {tab.label}
@@ -1030,8 +1034,8 @@ function MonthReport({ state, activeWeek }: any) {
                 <div className="h-1.5 bg-[#1e293b] rounded-full overflow-hidden">
                   <div
                     className={`h-full transition-all duration-500 ${p === 100
-                        ? 'bg-gradient-to-r from-[#10b981] to-[#059669]'
-                        : 'bg-gradient-to-r from-[#2563eb] to-[#a855f7]'
+                      ? 'bg-gradient-to-r from-[#10b981] to-[#059669]'
+                      : 'bg-gradient-to-r from-[#2563eb] to-[#a855f7]'
                       }`}
                     style={{ width: `${p}%` }}
                   />
